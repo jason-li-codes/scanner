@@ -30,10 +30,11 @@ public class ScannerRiffic {
         System.out.println("Give me a second number.");
         int numSecond = myScanner.nextInt();
 
-        int sum = numFirst + numSecond;
-        System.out.println("The sum of the two integers is " + sum);
+        double sum = numFirst + numSecond;
+        System.out.printf("The sum of the two integers is %f.", sum);
 
         // eats the next line so enter is not stuck in the buffer (queue)
+        // only applies if you go from number entry to string entry
         myScanner.nextLine();
 
 
