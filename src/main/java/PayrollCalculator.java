@@ -18,6 +18,13 @@ public class PayrollCalculator {
         System.out.println("How much is your pay rate?");
         double payRate = myScanner.nextDouble();
 
+        // prints gross pay
+        System.out.printf("%s, your total gross pay is $%.2f", name, grossPay(hours, payRate));
+
+    }
+
+    public static double grossPay(double hours, double payRate) {
+
         // calculates gross pay with overtime taken into account
         double grossPay = 0;
         if (hours > 40)
@@ -30,8 +37,8 @@ public class PayrollCalculator {
             grossPay = hours * payRate;
         }
 
-        // prints gross pay
-        System.out.printf("%s, your total gross pay is $%.2f", name, grossPay);
+        return grossPay;
 
     }
+
 }
